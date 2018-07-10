@@ -1,0 +1,72 @@
+.contenedorEfecto{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    overflow:hidden;
+    
+}
+
+@keyframes animacion{
+    0%{
+        transform:translateX(0px) translateY(0px) ;
+    }
+    50%{
+        transform:translateX(0px) translateY(40px) ;
+    }
+    100%{
+        transform:translateX(0px) translateY(0px);
+    }
+}
+.item{
+    position:relative;
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    margin:7px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+div .item:nth-child(1){
+    background-color: orchid;
+}
+div .item:nth-child(2){
+    background-color: palegreen;
+}
+div .item:nth-child(3){
+    background-color: paleturquoise;
+}
+div .item:nth-child(4){
+    background-color: powderblue;
+}
+div .item:nth-child(5){
+    background-color: rebeccapurple;
+}
+.item:before{
+    position: absolute;
+    content:'';
+    background: white;
+    width: 20px;
+    height: 20px;
+    top:-100%;
+    border-radius:10px;
+    animation: animacion 2s infinite;
+   
+}
+.item:nth-child(1):before{
+    animation-delay: 0.1s;
+}
+.item:nth-child(2):before{
+    animation-delay: 0.2s;
+}
+.item:nth-child(3):before{
+    animation-delay: 0.3s;
+}
+.item:nth-child(4):before{
+    animation-delay: 0.4s;
+}
+.item:nth-child(5):before{
+    animation-delay: 0.5s;
+}
